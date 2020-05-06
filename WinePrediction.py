@@ -1,19 +1,11 @@
 # Importing Libraries
-from pyspark.sql import DataFrame
-from pyspark import SparkContext, SQLContext
-from pyspark.ml import Pipeline
-from pyspark.ml.feature import StringIndexer, VectorIndexer
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 from pyspark.sql import SparkSession
-from pyspark.ml.feature import Imputer
-from pyspark.sql.functions import when
-from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.feature import StandardScaler
 from pyspark.mllib.util import MLUtils
 from pyspark.mllib.evaluation import MulticlassMetrics
 from pyspark.ml.classification import RandomForestClassifier
-from pyspark.mllib.evaluation import MulticlassMetrics
 
 # Creating A Spark Session
 spark_session = SparkSession.builder.master("local").appName("wineQualityPrediction").config("spark.some.config.option","some-value").getOrCreate()
