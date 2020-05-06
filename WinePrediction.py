@@ -16,7 +16,7 @@ from pyspark.ml.classification import RandomForestClassifier
 from pyspark.mllib.evaluation import MulticlassMetrics
 
 # Creating A Spark Session
-spark_session = SparkSession.builder.master("local").appName("wineClasssification").config("spark.some.config.option","some-value").getOrCreate()
+spark_session = SparkSession.builder.master("local").appName("wineQualityPrediction").config("spark.some.config.option","some-value").getOrCreate()
 
 # Reading Dataset
 raw_data = spark_session.read.csv('TrainingDataset.csv', header='true', inferSchema='true', sep=';')
